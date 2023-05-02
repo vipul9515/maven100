@@ -1,24 +1,12 @@
 @Library("mylibrary")_
 node('built-in')
 {
-    stage('ContDownload-master')
+    stage('ContDownload-loans')
     {
         cicd.newGit("maven")
     }
-    stage('ContBuild-master')
+    stage('ContBuild-loans')
     {
         cicd.newMaven()
-    }
-    stage('ContDeployment-master')
-    {
-        cicd.newDeploy()
-    }
-    stage('ContTesting-master')
-    {
-        cicd.newTest()
-    }
-    stage('ContDelivery-mater')
-    {
-        cicd.newdel()
     }
 }
